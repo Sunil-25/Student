@@ -1,3 +1,16 @@
 Welcome To Student Rest Api's
 
 Its a master file
+
+
+
+
+
+
+
+@PostMapping("/addStudent")
+	public Student addStudent(@RequestBody Student student)
+	{
+		repo.save(student);
+		return student;
+	}
