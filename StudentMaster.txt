@@ -6,8 +6,18 @@ Its a master file
 
 
 
+
+
+
+@PostMapping("/addStudent")
+	public Student addStudent(@RequestBody Student student)
+	{
+		repo.save(student);
+		return student;
+   } 
 @GetMapping("/student/{studentId}")
 	public Optional<Student> getStudentById(@PathVariable int studentId) {
 		
 		return repo.findById(studentId);
+
 	}
