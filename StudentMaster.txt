@@ -1,3 +1,13 @@
 Welcome To Student Rest Api's
 
 Its a master file
+
+
+
+
+
+@GetMapping("/student/{studentId}")
+	public Optional<Student> getStudentById(@PathVariable int studentId) {
+		
+		return repo.findById(studentId);
+	}
