@@ -3,13 +3,13 @@ Welcome To Student Rest Api's
 Its a master file
 
 
-
-
-
-
-
-
-@PostMapping("/addStudent")
+@PutMapping(path="/Student",consumes = {"application/json"})
+	public Student saveOrUpdateAlien(@RequestBody Student student)
+	{
+		repo.save(student);
+		return student;
+	}
+  @PostMapping("/addStudent")
 	public Student addStudent(@RequestBody Student student)
 	{
 		repo.save(student);
