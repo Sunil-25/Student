@@ -1,3 +1,13 @@
 Welcome To Student Rest Api's
 
 Its a master file
+
+
+@PutMapping(path="/Student",consumes = {"application/json"})
+	public Student saveOrUpdateAlien(@RequestBody Student student)
+	{
+		repo.save(student);
+		return student;
+	}
+  
+  
