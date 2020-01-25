@@ -21,3 +21,11 @@ Its a master file
 		return repo.findById(studentId);
 
 	}
+	
+	@DeleteMapping("/student/{studentId}")
+	public String deleteStudentById(@PathVariable int studentId) {
+		
+		return repo.delete(studentId);
+
+	}
+
