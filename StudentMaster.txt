@@ -25,7 +25,10 @@ Its a master file
 	@DeleteMapping("/student/{studentId}")
 	public String deleteStudentById(@PathVariable int studentId) {
 		
-		return repo.delete(studentId);
-
+		 repo.delete(studentId);
+		return "Deleted";
 	}
+	
+	
+	Final Copy
 
